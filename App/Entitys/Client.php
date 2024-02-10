@@ -3,7 +3,7 @@ namespace App\Entitys;
 
 use App\Models\ClientDAO;
 
-class Client
+class Client implements \JsonSerializable
 {
     private $id;
     private $name;
@@ -27,9 +27,15 @@ class Client
         $this->phone = $phone;
     }
 
+    public function jsonSerialize():mixed
+    {
+        $vars = get_object_vars($this);
+
+        return $vars;
+    }
+
     /**
      * Salva o cliente no banco de dados.
-     *
      */
     public function save()
     {
@@ -38,7 +44,6 @@ class Client
 
     /**
      * Atualiza o cliente no banco de dados.
-     *
      */
     public function update()
     {
@@ -47,7 +52,6 @@ class Client
 
     /**
      * Remove o cliente do banco de dados.
-     *
      */
     public function delete()
     {
