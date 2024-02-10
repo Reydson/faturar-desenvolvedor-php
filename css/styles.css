@@ -1,0 +1,7 @@
+.navbar-brand img {
+    max-width: 250px;
+}
+
+.pagination .page-link:not(.disabled) {
+    cursor: pointer;
+}
