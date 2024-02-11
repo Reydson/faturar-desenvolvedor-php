@@ -6,7 +6,8 @@ Este  projeto consiste em um sistema de gerenciamento de clientes, abrangendo ta
 2. Crie um banco de dados MySQL e importe o arquivo "database/faturar-desenvolvedor-php.sql". A importação pode ser feita através do comando `mysql -u username -p database_name < faturar-desenvolvedor-php.sql` ou através de ferramentas como o phpMyAdmin;
 3. Altere as configurações do banco de dados no arquivo "App/DB.php" (linhas 14 a 17);
 4. Instale as dependências do projeto utilizando o composer: `composer install`;
+> Opcionalmente você pode importar  os dados de demonstração presentes no arquivo "database/demo-data.sql";
 
-## Projeto hospedado:
+## Hospedagem do projeto:
 O projeto pode ser acessado no seguinte endereço: [https://rb.dev.br/faturar-desenvolvedor-php](https://rb.dev.br/faturar-desenvolvedor-php).
 

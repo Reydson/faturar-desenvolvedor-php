@@ -74,9 +74,9 @@ function updatePagination() {
 
 //Captura e trata o click na paginação
 pagination.addEventListener("click", ( {target} ) => {
-    if(target.classList.contains("previous") || target.parentElement.classList.contains("previous")) {
+    if((target.classList.contains("previous") || target.parentElement.classList.contains("previous")) && currentPage != 1) {
         loadClients(currentPage -1);
-    } else if(target.classList.contains("next") || target.parentElement.classList.contains("next")) {
+    } else if((target.classList.contains("next") || target.parentElement.classList.contains("next")) && currentPage < pageCount) {
         loadClients(currentPage +1);
     }
 });
